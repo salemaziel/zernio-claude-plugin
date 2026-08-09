@@ -8,7 +8,7 @@
     "url": "https://zernio.com"
   },
   "homepage": "https://docs.zernio.com/resources/mcp",
-  "repository": "https://github.com/zernio-dev/zernio-claude-plugin",
+  "repository": "https://github.com/salemaziel/zernio-claude-plugin",
   "license": "MIT",
   "keywords": ["social-media", "scheduling", "mcp", "instagram", "tiktok", "linkedin", "ads"],
   "mcpServers": {
