@@ -1,21 +1,41 @@
-# Zernio for Claude Code
+# Zernio Plugin (Claude Code, Codex CLI, Antigravity CLI)
 
-Schedule, publish, and analyze social media across 16 platforms (Instagram, TikTok, YouTube, X, LinkedIn, Facebook, Threads, Pinterest, Reddit, Bluesky, WhatsApp, Telegram, Snapchat, Google Business, Discord, Slack) directly from Claude Code, plus a unified inbox, paid-ads management, and analytics. Powered by Zernio's hosted MCP server (300+ tools).
+Schedule, publish, and analyze social media across 16 platforms (Instagram, TikTok, YouTube, X, LinkedIn, Facebook, Threads, Pinterest, Reddit, Bluesky, WhatsApp, Telegram, Snapchat, Google Business, Discord, Slack) directly from Claude Code, Codex CLI, and Antigravity CLI / Gemini CLI, plus a unified inbox, paid-ads management, and analytics. Powered by Zernio's hosted MCP server (300+ tools).
 
 ## Install
 
-```
+### Claude Code
+
+```bash
+# Direct plugin marketplace install
 /plugin marketplace add zernio-dev/zernio-claude-plugin
-/plugin install zernio@zernio
+/plugin install zernio-claude-plugin@zernio-claude-plugin
+
+# Or via VDW Plugin Marketplace
+claude plugin install vdw/zernio-claude-plugin
 ```
 
-Then run `/mcp`, pick **zernio**, and sign in. Your browser opens the Zernio consent screen, you approve, and Claude Code stores the token. There's no API key to copy.
+### Codex CLI
+
+```bash
+# Via VDW Marketplace
+codex plugin add zernio-claude-plugin@vdw
+```
+
+### Antigravity CLI / Gemini CLI
+
+```bash
+# Via VDW Extension Registry
+gemini extension install vdw-claude-plugins/zernio-claude-plugin
+```
+
+Then authenticate the **zernio** MCP server when prompted or via your CLI's MCP login command (`/mcp` or `codex mcp login zernio`). Your browser opens the Zernio consent screen, you approve, and the CLI stores the token. There's no API key to copy.
 
 Already have a Zernio account? That's the one you sign in with. If you don't, create it during the flow.
 
 ## What you can do
 
-- "List my connected social accounts" (`/zernio:accounts`)
+- "List my connected social accounts" (`/accounts` or `/zernio:accounts`)
 - "Schedule a LinkedIn post for tomorrow at 9am: ..."
 - "Cross-post this to X, LinkedIn, and Bluesky right now"
 - "Show my unread Instagram DMs"
@@ -30,12 +50,12 @@ Tokens are short-lived and refresh automatically. Revoke access any time from [z
 
 ### Headless and CI
 
-`claude -p` and Agent SDK runs can't open a browser, so a machine that has never signed in can't complete OAuth. Two options:
+Headless runs can't open a browser, so a machine that has never signed in can't complete OAuth. Two options:
 
-- Sign in once interactively on that machine (`claude mcp login zernio`). The stored token refreshes on its own from then on.
+- Sign in once interactively on that machine (`claude mcp login zernio` / `codex mcp login zernio`). The stored token refreshes on its own from then on.
 - Or skip the plugin and configure the server with an API key, which needs no browser:
 
-  ```
+  ```bash
   claude mcp add --transport http zernio https://mcp.zernio.com/mcp \
     --header "Authorization: Bearer sk_your_key"
   ```
@@ -47,3 +67,4 @@ Tokens are short-lived and refresh automatically. Revoke access any time from [z
 - Docs: https://docs.zernio.com/resources/mcp
 - Dashboard: https://zernio.com/dashboard
 - Support: support@zernio.com
+
