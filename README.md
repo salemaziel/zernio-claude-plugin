@@ -1,6 +1,6 @@
-# Zernio Plugin (Claude Code, Codex CLI, Antigravity CLI)
+# Zernio Plugin (Claude Code, Codex CLI, Antigravity CLI, Hermes Agent)
 
-Schedule, publish, and analyze social media across 16 platforms (Instagram, TikTok, YouTube, X, LinkedIn, Facebook, Threads, Pinterest, Reddit, Bluesky, WhatsApp, Telegram, Snapchat, Google Business, Discord, Slack) directly from Claude Code, Codex CLI, and Antigravity CLI / Gemini CLI, plus a unified inbox, paid-ads management, and analytics. Powered by Zernio's hosted MCP server (300+ tools).
+Schedule, publish, and analyze social media across 16 platforms (Instagram, TikTok, YouTube, X, LinkedIn, Facebook, Threads, Pinterest, Reddit, Bluesky, WhatsApp, Telegram, Snapchat, Google Business, Discord, Slack) directly from Claude Code, Codex CLI, Antigravity CLI / Gemini CLI, and Hermes Agent, plus a unified inbox, paid-ads management, and analytics. Powered by Zernio's hosted MCP server (300+ tools).
 
 ## Install
 
@@ -27,6 +27,13 @@ codex plugin add zernio-claude-plugin@vdw
 ```bash
 # Via VDW Extension Registry
 gemini extension install vdw-claude-plugins/zernio-claude-plugin
+```
+
+### Hermes Agent
+
+```bash
+# Register via Hermes plugin configuration
+hermes plugin install salemaziel/zernio-claude-plugin
 ```
 
 Then authenticate the **zernio** MCP server when prompted or via your CLI's MCP login command (`/mcp` or `codex mcp login zernio`). Your browser opens the Zernio consent screen, you approve, and the CLI stores the token. There's no API key to copy.
