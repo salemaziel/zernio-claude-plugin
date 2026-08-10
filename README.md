@@ -31,9 +31,20 @@ gemini extension install vdw-claude-plugins/zernio-claude-plugin
 
 ### Hermes Agent
 
+Add `zernio` to your `~/.hermes/config.yaml`:
+
+```yaml
+mcp_servers:
+  zernio:
+    url: "https://mcp.zernio.com/mcp"
+    enabled: true
+```
+
+Or register via Hermes CLI / plugin configuration:
+
 ```bash
-# Register via Hermes plugin configuration
 hermes plugin install salemaziel/zernio-claude-plugin
+# Or run /reload-mcp inside Hermes Agent
 ```
 
 Then authenticate the **zernio** MCP server when prompted or via your CLI's MCP login command (`/mcp` or `codex mcp login zernio`). Your browser opens the Zernio consent screen, you approve, and the CLI stores the token. There's no API key to copy.
