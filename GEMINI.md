@@ -1,4 +1,4 @@
-# zernio-claude-plugin
+# zernio
 
 Schedule, publish, and analyze social media across 15+ platforms (Instagram, TikTok, YouTube, X, LinkedIn, Facebook, Threads, Pinterest, Reddit, Bluesky, WhatsApp, Telegram, Snapchat, Google Business, Discord, Slack) directly from Antigravity CLI and Gemini CLI, plus a unified inbox, paid-ads management, and analytics. Powered by Zernio's hosted MCP server (300+ tools).
 

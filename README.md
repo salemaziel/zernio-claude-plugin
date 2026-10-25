@@ -9,17 +9,17 @@ Schedule, publish, and analyze social media across 16 platforms (Instagram, TikT
 ```bash
 # Direct plugin marketplace install
 /plugin marketplace add salemaziel/zernio-claude-plugin
-/plugin install zernio-claude-plugin@zernio-claude-plugin
+/plugin install zernio@zernio
 
 # Or via VDW Plugin Marketplace
-claude plugin install vdw/zernio-claude-plugin
+claude plugin install zernio@vdw
 ```
 
 ### Codex CLI
 
 ```bash
 # Via VDW Marketplace
-codex plugin add zernio-claude-plugin@vdw
+codex plugin add zernio@vdw
 ```
 
 ### Antigravity CLI / Gemini CLI
